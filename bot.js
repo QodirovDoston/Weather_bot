@@ -2,14 +2,15 @@ const axios = require("axios");
 const { Telegraf } = require("telegraf");
 const TOKEN ="6008373431:AAGK8gbVVR6ot6echddiP59CsghhA8bG4_g"
 const bot = new Telegraf(TOKEN);
-const Url =
-  'http://api.weatherstack.com/current?access_key=a4526f4e34340020b34865e2cc70d5d9&query="';
+const Url ='http://api.weatherstack.com/current?access_key=a4526f4e34340020b34865e2cc70d5d9&query="';
+
 const fetchData = async (cityName) => {
   const res = await axios.get(`${Url + cityName}`);
   return res;
 };
 bot.start((ctx) => {
-  ctx.reply("Hello im a bot, Enter an optional location name ");
+  ctx.reply(`Hello im a bot ${message.username}, Enter an optional location name `);
+  console.log(ctx.username);
 });
 bot.on("text", async (ctx) => {
   const { message } = ctx;
