@@ -9,7 +9,7 @@ const fetchData = async (cityName) => {
   return res;
 };
 bot.start((ctx) => {
-  ctx.reply("Hello im a bot");
+  ctx.reply("Hello im a bot, Enter an optional location name ");
 });
 bot.on("text", async (ctx) => {
   const { message } = ctx;
