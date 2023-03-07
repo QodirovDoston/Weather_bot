@@ -24,12 +24,12 @@ bot.on("text", async (ctx) => {
       ` 🌆 City:${location.name}\n-\n 🌡 Temperature ${
         current.temperature
       }°\n-\n❓ Weather status: ${
-        (weatherStatus.toLowerCase().includes("clear") === true && "☀️") ||
-        (weatherStatus.toLowerCase().includes("sunny") === true && "☀️") ||
-        (weatherStatus.toLowerCase().includes("cloud") === true && "☁️") ||
-        (weatherStatus.toLowerCase().includes("overcast") === true && "☁️") ||
-        (weatherStatus.toLowerCase().includes("rain") === true && "🌧") ||
-        (weatherStatus.toLowerCase().includes("snow") === true && "❄️") 
+        (weatherStatus.toLowerCase().includes("clear ") === true && " ☀️") ||
+        (weatherStatus.toLowerCase().includes("sunny ") === true && " ☀️") ||
+        (weatherStatus.toLowerCase().includes("cloud ") === true && " ☁️") ||
+        (weatherStatus.toLowerCase().includes("overcast ") === true && " ☁️") ||
+        (weatherStatus.toLowerCase().includes("rain ") === true && " 🌧") ||
+        (weatherStatus.toLowerCase().includes("snow") === true && " ❄️") 
       } ${current.weather_descriptions[0]}`
     
     );
