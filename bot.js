@@ -11,6 +11,7 @@ const fetchData = async (cityName) => {
 bot.start((ctx) => {
     ctx.reply(`Hello ${ctx.from.first_name}, Enter an optional location name `);
     console.log(ctx.username);
+    
 });
 bot.info((ctx) => {
   ctx.reply(`Enter an optional location name `);
